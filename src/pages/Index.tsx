@@ -359,7 +359,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {reviews.map((review) => (
               <Card key={review.id} className="hover:shadow-xl transition-shadow">
                 <CardHeader>
@@ -378,6 +378,13 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-white">
+              <Icon name="MessageSquarePlus" className="mr-2 h-5 w-5" />
+              Оставить свой отзыв
+            </Button>
           </div>
         </div>
       </section>
