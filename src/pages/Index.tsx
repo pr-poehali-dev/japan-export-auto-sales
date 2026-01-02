@@ -481,10 +481,14 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Социальные сети</h4>
-              <div className="flex gap-3">
-                {['MessageCircle', 'Instagram', 'Youtube'].map((social, index) => (
-                  <a key={index} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
-                    <Icon name={social} className="h-5 w-5" />
+              <div className="flex gap-3 mb-4">
+                {[
+                  { icon: 'MessageCircle', link: 'https://t.me/ExportNumber1' },
+                  { icon: 'Instagram', link: '#' },
+                  { icon: 'Youtube', link: '#' }
+                ].map((social, index) => (
+                  <a key={index} href={social.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
+                    <Icon name={social.icon} className="h-5 w-5" />
                   </a>
                 ))}
               </div>
