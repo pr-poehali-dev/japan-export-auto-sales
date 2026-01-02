@@ -84,22 +84,22 @@ const Index = () => {
       id: 1,
       name: 'Иван',
       rating: 5,
-      text: 'Заказал Camry из Японии. Привезли за 2 месяца, всё оформили. Машина супер!',
-      date: '28.12.2024',
+      text: 'Заказал Camry из Японии. Привезли за 3 недели, всё оформили. Машина супер!',
+      date: '02.01.2025',
     },
     {
       id: 2,
       name: 'Елена',
       rating: 5,
       text: 'Взяла Tucson для семьи. Цена ниже чем в салонах. Всем довольна, спасибо!',
-      date: '22.12.2024',
+      date: '30.12.2024',
     },
     {
       id: 3,
       name: 'Андрей',
       rating: 5,
       text: 'Купил Sportage через этих ребят. Быстро, честно, без проблем.',
-      date: '18.12.2024',
+      date: '28.12.2024',
     },
   ];
 
@@ -337,7 +337,7 @@ const Index = () => {
                 { number: '500+', label: 'Довольных клиентов' },
                 { number: '2 года', label: 'Опыт работы' },
                 { number: '100%', label: 'Легальность' },
-                { number: '2-3 мес', label: 'Срок доставки' },
+                { number: '14-20 дней', label: 'Срок доставки' },
               ].map((stat, index) => (
                 <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                   <div className="text-4xl font-bold text-secondary mb-2">{stat.number}</div>
