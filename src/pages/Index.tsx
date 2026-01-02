@@ -302,7 +302,7 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { number: '500+', label: 'Довольных клиентов' },
-                { number: '8 лет', label: 'Опыт работы' },
+                { number: '2 года', label: 'Опыт работы' },
                 { number: '100%', label: 'Легальность' },
                 { number: '2-3 мес', label: 'Срок доставки' },
               ].map((stat, index) => (
@@ -393,7 +393,9 @@ const Index = () => {
               <div className="space-y-4 mb-8">
                 {[
                   { icon: 'MapPin', title: 'Адрес', text: 'г. Хабаровск, ул. Примерная, 27' },
-                  { icon: 'Phone', title: 'Телефон', text: '+7 (4212) XXX-XXX' },
+                  { icon: 'Phone', title: 'Телефон', text: '+7 (909) 431-06-21' },
+                  { icon: 'Phone', title: 'Телефон 2', text: '+7 (924) 210-84-35' },
+                  { icon: 'Send', title: 'Telegram', text: '@Export_auto27', link: 'https://t.me/Export_auto27' },
                   { icon: 'Mail', title: 'Email', text: 'info@japanexport27.ru' },
                   { icon: 'Clock', title: 'Время работы', text: 'Пн-Пт: 9:00 - 18:00' },
                 ].map((contact, index) => (
@@ -403,7 +405,11 @@ const Index = () => {
                     </div>
                     <div>
                       <div className="font-semibold">{contact.title}</div>
-                      <div className="text-muted-foreground">{contact.text}</div>
+                      {contact.link ? (
+                        <a href={contact.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">{contact.text}</a>
+                      ) : (
+                        <div className="text-muted-foreground">{contact.text}</div>
+                      )}
                     </div>
                   </div>
                 ))}
